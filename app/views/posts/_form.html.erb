@@ -1,0 +1,21 @@
+<%= form_with(model: post) do |form| %>
+  <%= render "error_messages", resource: form.object %>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :body, class: "label" %>
+    <%= form.text_area :body, class: "input" %>
+  </div>
+
+  <div class="mb-6 flex justify-between items-center">
+    <%= form.button class: "btn btn-default" %>
+
+    <% if form.object.persisted? %>
+      <%= link_to 'Delete', form.object, class: "btn btn-default", method: :delete, data: { remote: true, confirm: "Are you sure?" } %>
+    <% end %>
+  </div>
+<% end %>

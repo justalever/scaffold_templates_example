@@ -56,6 +56,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'sidekiq', '~> 5.2', '>= 5.2.7'
-group :development, :test do
-  gem 'better_errors'
-end

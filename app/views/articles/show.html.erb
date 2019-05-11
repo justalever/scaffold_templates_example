@@ -1,0 +1,12 @@
+<div class="container mx-auto my-8 px-4">
+    <p class="text-lg font-semibold">Title:</p>
+  <p class="leading-normal"><%= @article.title %></p>
+
+    <p class="text-lg font-semibold">Body:</p>
+  <p class="leading-normal"><%= @article.body %></p>
+
+    <div class="flex items-center justify-start mt-6">
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-default mr-4" %>
+    <%= link_to 'Back', articles_path, class: "btn btn-default" %>
+  </div>
+</div>
